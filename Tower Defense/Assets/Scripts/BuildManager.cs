@@ -10,6 +10,7 @@ public class BuildManager : MonoBehaviour
     private TurretBluePrint turretToBuild;
     private Node SelectedNode;
     public GameObject buildEffect;
+    public GameObject sellEffect;
     public NodeUI nodeUI;
 
     public bool CanBuild { get { return turretToBuild != null; } }

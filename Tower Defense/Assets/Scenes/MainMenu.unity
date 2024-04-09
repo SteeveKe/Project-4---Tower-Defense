@@ -789,8 +789,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneFader
       objectReference: {fileID: 0}
+    - target: {fileID: 6314656460153335613, guid: 26cae6d8cd2c20f45b7551edf20f0f79, type: 3}
+      propertyPath: m_Maskable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7371286552948057845, guid: 26cae6d8cd2c20f45b7551edf20f0f79, type: 3}
       propertyPath: m_CullTransparentMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812713942277787925, guid: 26cae6d8cd2c20f45b7551edf20f0f79, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9157174679475076969, guid: 26cae6d8cd2c20f45b7551edf20f0f79, type: 3}
@@ -913,7 +921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5734e580cf6234d4cb6179197c99da6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: MainLevel
+  levelToLoad: LevelSelect
   sceneFader: {fileID: 113950061}
 --- !u!4 &1511764390
 Transform:
@@ -1343,6 +1351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 827136725963357298}
+  - component: {fileID: 4115619661527251825}
   m_Layer: 0
   m_Name: StandardTurret
   m_TagString: Untagged
@@ -1350,6 +1359,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4115619661527251825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4115619661527251824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49a498f6fe965c445a4d33e211f20a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &4406765898418835225
 MeshRenderer:
   m_ObjectHideFlags: 0

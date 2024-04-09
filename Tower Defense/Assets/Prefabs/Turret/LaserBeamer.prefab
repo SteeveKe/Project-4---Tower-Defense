@@ -285,6 +285,8 @@ MonoBehaviour:
   fireRate: 1
   bulletPrefab: {fileID: 0}
   useLaser: 1
+  damageOverTime: 30
+  slowPct: 0.5
   lineRenderer: {fileID: 4867414107411984687}
   impactEffect: {fileID: 68265362135704376}
   impactLight: {fileID: 4357934856561570785}
@@ -313,7 +315,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1eed581bf986cb140a1b67f39c827480, type: 2}
+  - {fileID: 2100000, guid: c51732f73f5ba2243aae604faf758567, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -344,8 +346,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.1378531
-        value: 0.22547738
+        time: 0
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -388,7 +390,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0

@@ -11,6 +11,5 @@ public class EnemyDestination : MonoBehaviour
     private void Start()
     {
         destination = enemiesDestination;
-        
     }
 }

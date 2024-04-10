@@ -27,7 +27,7 @@ public class EnemyNavigation : MonoBehaviour
         
         Vector3 distance = transform.position - destination.position;
         distance.y = 0;
-        if(distance.magnitude <= 1.5f)
+        if(distance.magnitude <= 3f)
         {
             EndPath();
         }

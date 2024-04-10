@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Effects;
+using Random = UnityEngine.Random;
 
 public class Bullet : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Bullet : MonoBehaviour
     public float speed = 70f;
     public float explosionRadius;
     public int damage = 50;
+    public int shakeEffectPower = 5;
 
     public GameObject impactEffect;
     // Update is called once per frame
@@ -59,6 +61,10 @@ public class Bullet : MonoBehaviour
 
     void Explode()
     {
+        Vector3 explosion = new Vector3(Random.Range(-shakeEffectPower, shakeEffectPower + 1),
+            Random.Range(-shakeEffectPower, shakeEffectPower + 1),
+            Random.Range(-shakeEffectPower, shakeEffectPower + 1));
+        CameraController.ImpulseSource.GenerateImpulseWithVelocity(explosion);
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
 
         foreach (Collider collider in colliders)

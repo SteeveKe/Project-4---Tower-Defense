@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 77857525576627773}
   - component: {fileID: 2784600274307231873}
   - component: {fileID: 783884595541066141}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 4945741699391727750}
   - component: {fileID: 730404586382318879}
   - component: {fileID: 3115571480809596600}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HealthBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,8 @@ GameObject:
   - component: {fileID: 7945932478399332313}
   - component: {fileID: -7620547038035172857}
   - component: {fileID: 1345941407924637696}
-  m_Layer: 0
+  - component: {fileID: 8670852076581761405}
+  m_Layer: 8
   m_Name: Enemy_simple
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -313,6 +314,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 7945932478399332313}
+--- !u!54 &8670852076581761405
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7487896679523660747}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8140957422508376301
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +354,7 @@ GameObject:
   - component: {fileID: 684597724001291703}
   - component: {fileID: 591130154177560677}
   - component: {fileID: 732851137422306415}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: EnemyHealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

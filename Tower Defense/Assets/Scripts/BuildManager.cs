@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class BuildManager : MonoBehaviour
@@ -12,6 +13,8 @@ public class BuildManager : MonoBehaviour
     public GameObject buildEffect;
     public GameObject sellEffect;
     public NodeUI nodeUI;
+    public CinemachineVirtualCamera selectCamera;
+    public CameraController mainCamera;
 
     public bool CanBuild { get { return turretToBuild != null; } }
     public bool HasMoney { get { return PlayerStats.Money >= turretToBuild.cost; } }
@@ -33,6 +36,13 @@ public class BuildManager : MonoBehaviour
             DeselectNode();
             return;
         }
+
+        mainCamera.canMove = false;
+        Transform nodeTransform = node.transform;
+        selectCamera.LookAt = nodeTransform;
+        selectCamera.Follow = nodeTransform;
+        selectCamera.gameObject.SetActive(true);
+        
         SelectedNode = node;
         turretToBuild = null;
         
@@ -41,6 +51,11 @@ public class BuildManager : MonoBehaviour
 
     public void DeselectNode()
     {
+        mainCamera.canMove = true;
+        selectCamera.LookAt = null;
+        selectCamera.Follow = null;
+        selectCamera.gameObject.SetActive(false);
+        
         SelectedNode = null;
         nodeUI.Hide();
     }

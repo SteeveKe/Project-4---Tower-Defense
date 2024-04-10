@@ -48,6 +48,7 @@ MonoBehaviour:
   speed: 40
   explosionRadius: 12
   damage: 80
+  shakeEffectPower: 6
   impactEffect: {fileID: 6317238446154014420, guid: b5adf91f8c694934db279c7fb3fe2b75, type: 3}
 --- !u!1 &1550298166525032452
 GameObject:

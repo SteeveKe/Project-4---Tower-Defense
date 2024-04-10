@@ -1,19 +1,36 @@
+using System;
+using Cinemachine;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    public static CinemachineImpulseSource ImpulseSource;
     public float panSpeed = 30f;
     public float scrollSpeed = 5f;
     public float minY = 10f;
     public float maxY = 80f;
 
     public float panBorderThickness = 10f;
+
+    public bool canMove;
+
+    private void Start()
+    {
+        ImpulseSource = FindObjectOfType<CinemachineImpulseSource>();
+        canMove = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (GameManager.GameIsOver)
         {
             enabled = false;
+            return;
+        }
+        
+        if (!canMove)
+        {
             return;
         }
 

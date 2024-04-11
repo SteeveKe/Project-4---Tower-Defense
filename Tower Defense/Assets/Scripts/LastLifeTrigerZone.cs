@@ -9,7 +9,7 @@ public class LastLifeTrigerZone : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") && PlayerStats.Lives == 1)
         {
             gameManager.LastLifeAnimation(other.GetComponent<Enemy>());
         }

@@ -46,8 +46,11 @@ public class GameManager : MonoBehaviour
 
     public void WinLevel()
     {
-        GameIsOver = true;
-        completeLevelUI.SetActive(true);
+        if (!GameIsOver)
+        {
+            GameIsOver = true;
+            completeLevelUI.SetActive(true);
+        }
     }
 
     public void LastLifeAnimation(Enemy enemy)
